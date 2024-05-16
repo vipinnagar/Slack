@@ -26,7 +26,7 @@ def command():
     data = request.form
     print(data)
     # Call the appropriate function based on the slash command
-    if data["command"] == "/forward" and data["channel_id"] == "C073D3N4L1Z":
+    if data["command"] == "/forward" and data["channel_id"] == os.environ['CHANNEL_1']:
         message = data["text"]
     else:
         message = f"Invalid command: {data['command']}"
